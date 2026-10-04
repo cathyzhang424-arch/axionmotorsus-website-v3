@@ -1153,3 +1153,45 @@ main,section,header,footer{max-width:100%;}
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+
+/* Prototype testing video gallery */
+.testing-section{display:block;}
+.testing-intro{margin-bottom:34px;}
+.testing-videos{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  max-width:1320px;
+  margin:0 auto;
+}
+.testing-video-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,.10);
+}
+.testing-video-wrap{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  background:#000;
+}
+.testing-video-wrap iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+.testing-youtube-link{
+  display:block;
+  padding:13px 16px 15px;
+  font-weight:700;
+  text-decoration:none;
+}
+@media (max-width:760px){
+  .testing-videos{grid-template-columns:1fr;}
+}
+
+
